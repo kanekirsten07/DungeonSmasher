@@ -1,0 +1,51 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class CharacterScript : MonoBehaviour {
+
+    //max speed of character
+    public float maxSpeed = 5.0f;
+ 
+    private Animator animator;
+    private Rigidbody2D cachedRigidBody2D;
+ 
+    public float facingAngleAdjustment = -90.0f;
+  
+    /// <summary>
+    /// Initialization function that needs to interact 
+    /// with other components or objects that must be 
+    /// initialized prior to working with them.
+    /// </summary>
+    private void Start()
+    {
+        //cached animator
+        this.animator = this.GetComponent<Animator>();
+ 
+        //cached rigidbody
+        this.cachedRigidBody2D = this.GetComponent<Rigidbody2D>();
+    }
+ 
+    public void Move(Vector2 movement)
+    {
+        //move the rigid body, which is part of the physics system
+        //This ensures smooth movement.
+        this.cachedRigidBody2D.velocity = new Vector2(movement.x * maxSpeed, movement.y * maxSpeed);
+ 
+        //take the absolute value and add, because x or y 
+        //may be negative and potentially cancel eachother out.
+        float speed = Mathf.Abs(movement.x) + Mathf.Abs(movement.y);
+ 
+        //set the speed variable in the animation component to ensure proper state.
+        animator.SetFloat("Speed", speed);
+
+        float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg + facingAngleAdjustment;
+
+        //don't rotate if we don't need to.
+        if (speed > 0.0f)
+        {
+            //rotate by angle around the z axis.
+           transform.rotation = Quaternion.AngleAxis(angle, new Vector3(0, 0, 1));
+        }
+    }
+
+}
