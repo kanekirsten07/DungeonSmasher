@@ -64,13 +64,9 @@ public class CharacterInputScript : MonoBehaviour {
 
         Vector2 movement = new Vector2(xMovement, yMovement);
 
-        if (movement.magnitude > 0)
-        {
-            this.heading = movement.normalized;
-        }
-
+        
         //use our character script reference to make a call into its public api
         //to move the character by our input factor.
-        character.Move(heading);
+        character.Move(movement);
     }
 }

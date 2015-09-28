@@ -9,35 +9,37 @@ public class GenerateItem : MonoBehaviour {
     public GameObject BlueGem;
     public GameObject OrangeGem;
     public GameObject YellowGem;
+    public GameObject Heart;
+
 
 	void Start () {
         int spawnSeed = Random.Range(0, 4);
+        GameObject spawn = new GameObject();
         switch (spawnSeed)
         {
             case 0:
-                GameObject.Instantiate(Coin, transform.position, transform.rotation);
+               spawn = Instantiate(Coin, transform.position, transform.rotation) as GameObject;
                 Debug.Log("Coin Generated");
                 break;
             case 1:
-                GameObject.Instantiate(BlueGem, transform.position, transform.rotation);
+                spawn = GameObject.Instantiate(BlueGem, transform.position, transform.rotation) as GameObject;
                 Debug.Log("Blue Gem generated");
                 break;
             case 2:
-                GameObject.Instantiate(OrangeGem, transform.position, transform.rotation);
+                spawn = GameObject.Instantiate(OrangeGem, transform.position, transform.rotation) as GameObject;
                 Debug.Log("Orange Gem generated");
                 break;
             case 3:
-                GameObject.Instantiate(YellowGem, transform.position, transform.rotation);
+                spawn = GameObject.Instantiate(YellowGem, transform.position, transform.rotation) as GameObject;
                 Debug.Log("Yellow Gem generated");
                 break;
+           
         }
+        spawn.transform.parent = transform;
+            
 
 
 
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

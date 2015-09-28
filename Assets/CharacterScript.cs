@@ -4,8 +4,9 @@ using System.Collections;
 public class CharacterScript : MonoBehaviour {
 
     //max speed of character
-    public float maxSpeed = 5.0f;
- 
+    public float maxSpeed = 1.0f;
+	public int totalScore ;
+    public GUIText scoreText;
     private Animator animator;
     private Rigidbody2D cachedRigidBody2D;
  
@@ -20,9 +21,10 @@ public class CharacterScript : MonoBehaviour {
     {
         //cached animator
         this.animator = this.GetComponent<Animator>();
- 
+        scoreText = GameObject.Find("Score").GetComponent<GUIText>();
         //cached rigidbody
         this.cachedRigidBody2D = this.GetComponent<Rigidbody2D>();
+        totalScore = 0;
     }
  
     public void Move(Vector2 movement)
@@ -38,7 +40,7 @@ public class CharacterScript : MonoBehaviour {
         //set the speed variable in the animation component to ensure proper state.
         animator.SetFloat("Speed", speed);
 
-        float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg + facingAngleAdjustment;
+        float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg + -facingAngleAdjustment;
 
         //don't rotate if we don't need to.
         if (speed > 0.0f)
@@ -47,5 +49,18 @@ public class CharacterScript : MonoBehaviour {
            transform.rotation = Quaternion.AngleAxis(angle, new Vector3(0, 0, 1));
         }
     }
+
+
+	public void addToScore(int scoreValue)
+	{
+		totalScore += scoreValue;
+        Debug.Log("Score is" + totalScore);
+        scoreText.text = "Score: " + totalScore;
+	}
+
+	public int getScore()
+	{
+		return totalScore;
+	}
 
 }
