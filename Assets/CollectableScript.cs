@@ -45,6 +45,21 @@ public class CollectableScript : MonoBehaviour {
             case "YellowGem":
                 scoreModifier = 100;
                 break;
+            case "AquaGem":
+                scoreModifier = 30;
+                break;
+            case "DarkBlueGem":
+                scoreModifier = 35;
+                break;
+            case "DarkPupleGem":
+                scoreModifier = 40;
+                break;
+            case "GreenGem":
+                scoreModifier = 55;
+                break;
+            case "Heart":
+                scoreModifier = 5;
+                break;
 
                 
         }
