@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 04319588ac96105488831a32056b2ca3
+timeCreated: 1441938911
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: heart_lost_0
+    21300002: heart_lost_1
+    21300004: heart_lost_2
+    21300006: heart_lost_3
+    21300008: heart_lost_4
+    21300010: heart_lost_5
+    21300012: heart_lost_6
+    21300014: heart_lost_7
+    21300016: heart_lost_8
+    21300018: heart_lost_9
+    21300020: heart_lost_10
+    21300022: heart_lost_11
+    21300024: heart_lost_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: heart_lost_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 171
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 171
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 171
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 114
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_6
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 114
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_7
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 114
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 57
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 57
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_11
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 57
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: heart_lost_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

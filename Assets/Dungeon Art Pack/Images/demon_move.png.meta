@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: f22ab5bb6f0897b4f926a6046ecca3f3
+timeCreated: 1445844373
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: demon_move_0
+    21300002: demon_move_1
+    21300004: demon_move_2
+    21300006: demon_move_3
+    21300008: demon_move_4
+    21300010: demon_move_5
+    21300012: demon_move_6
+    21300014: demon_move_7
+    21300016: demon_move_8
+    21300018: demon_move_9
+    21300020: demon_move_10
+    21300022: demon_move_11
+    21300024: demon_move_12
+    21300026: demon_move_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: demon_move_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 363
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 363
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_2
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 363
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_3
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 363
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 242
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_5
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 242
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_6
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 242
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 242
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 121
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_9
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 121
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_10
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 121
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_11
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 121
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demon_move_13
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
