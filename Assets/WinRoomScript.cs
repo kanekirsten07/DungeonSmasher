@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Parse;
 
 public class WinRoomScript : MonoBehaviour {
 
@@ -9,7 +10,12 @@ public class WinRoomScript : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+    public void sendUserNameWithScore()
+    {
+        ParseObject submitScore = new ParseObject("SubmitScore");
+        submitScore["testUsername"] = 2880;
+        submitScore.SaveAsync();
+    }
 	
 
     void OnTriggerEnter2D(Collider2D col)
@@ -41,8 +47,5 @@ public class WinRoomScript : MonoBehaviour {
         GameObject.Instantiate(submitScorePopup);
     }
 
-    public void sendUserNameWithScore()
-    {
-
-    }
+    
 }

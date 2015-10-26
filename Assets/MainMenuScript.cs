@@ -20,6 +20,6 @@ public class MainMenuScript : MonoBehaviour {
 
     public void viewHighScores()
     {
-
+        Application.LoadLevel("HighScoreView");
     }
 }

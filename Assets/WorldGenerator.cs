@@ -6,6 +6,11 @@ public class WorldGenerator : MonoBehaviour {
 	public GameObject tileRed; //<- make sure this has a material set on it.
 	public GameObject tileBlack;
     public GameObject tileGreen;
+    public GameObject tileBlue;
+    public GameObject tileOrange;
+    public GameObject tileYellow;
+    public GameObject tilePurple;
+    public GameObject tileWin;
     public List<GameObject> tiles;
 	private uint worldWidth = 3;
 	private uint worldHeight = 3;
@@ -41,21 +46,21 @@ public class WorldGenerator : MonoBehaviour {
         Transform squareOne = go.transform;
       //  Debug.Log(squareOne.lossyScale.y);
 
-        GameObject newSquare = (GameObject) Object.Instantiate(tileBlack);
+        GameObject newSquare = generateRoom();
         tiles.Add(newSquare);
-        GameObject newSquare2 = (GameObject)Object.Instantiate(tileBlack);
+        GameObject newSquare2 = generateRoom();
        tiles.Add(newSquare2);
-        GameObject newSquare3 = (GameObject)Object.Instantiate(tileBlack);
+       GameObject newSquare3 = generateRoom();
         tiles.Add(newSquare3);
-        GameObject newSquare4 = (GameObject)Object.Instantiate(tileBlack);
+        GameObject newSquare4 = generateRoom();
         tiles.Add(newSquare4);
-        GameObject newSquare5 = (GameObject)Object.Instantiate(tileGreen);
+        GameObject newSquare5 = generateRoom();
         tiles.Add(newSquare5);
-        GameObject newSquare6 = (GameObject)Object.Instantiate(tileGreen);
+        GameObject newSquare6 = generateRoom();
         tiles.Add(newSquare6);
-        GameObject newSquare7 = (GameObject)Object.Instantiate(tileGreen);
+        GameObject newSquare7 = generateRoom();
        tiles.Add(newSquare7);
-        GameObject newSquare8 = (GameObject)Object.Instantiate(tileGreen);
+       GameObject newSquare8 = generateRoom();
         tiles.Add(newSquare8);
 
         float scaleOffsetX = 0.50f;
@@ -73,6 +78,22 @@ public class WorldGenerator : MonoBehaviour {
         newSquare8.transform.position = new Vector3(squareOne.position[0] - scaleOffsetX, squareOne.position[1] - scaleOffsetY, squareOne.position[2]);
          
 	}
+
+    GameObject generateRoom()
+    {
+        int spawnSeed = Random.Range(0, 9);
+        GameObject spawn = new GameObject();
+        switch (spawnSeed)
+        {
+            case 0:
+                spawn = (GameObject)Object.Instantiate(tileBlack);
+                break;
+
+        }
+
+        return spawn;
+
+    }
 
     bool playerIsWithinBounds()
     {

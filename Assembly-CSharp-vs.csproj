@@ -50,6 +50,7 @@
      <Compile Include="Assets\CharacterInputScript.cs" />
      <Compile Include="Assets\CharacterScript.cs" />
      <Compile Include="Assets\CollectableScript.cs" />
+     <Compile Include="Assets\DemonScript.cs" />
      <Compile Include="Assets\Dungeon Art Pack\AnimateSprite.cs" />
      <Compile Include="Assets\EndGameHandling.cs" />
      <Compile Include="Assets\GenerateItem.cs" />
