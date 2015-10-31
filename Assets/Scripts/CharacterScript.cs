@@ -5,6 +5,7 @@ public class CharacterScript : MonoBehaviour {
 
     //max speed of character
     public float maxSpeed = 1.0f;
+    public int health;
 	public int totalScore ;
     public GUIText scoreText;
     private Animator animator;

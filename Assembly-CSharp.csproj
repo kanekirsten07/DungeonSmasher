@@ -45,45 +45,40 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraFollow.cs" />
-     <Compile Include="Assets\CharacterInputScript.cs" />
-     <Compile Include="Assets\CharacterScript.cs" />
-     <Compile Include="Assets\CollectableScript.cs" />
-     <Compile Include="Assets\DemonScript.cs" />
      <Compile Include="Assets\Dungeon Art Pack\AnimateSprite.cs" />
-     <Compile Include="Assets\EndGameHandling.cs" />
-     <Compile Include="Assets\GenerateItem.cs" />
-     <Compile Include="Assets\MainMenuScript.cs" />
-     <Compile Include="Assets\PlayerController.cs" />
-     <Compile Include="Assets\RoomScript.cs" />
-     <Compile Include="Assets\SkeletonScript.cs" />
-     <Compile Include="Assets\WinRoomScript.cs" />
-     <Compile Include="Assets\WorldGenerator.cs" />
+     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\CharacterInputScript.cs" />
+     <Compile Include="Assets\Scripts\CharacterScript.cs" />
+     <Compile Include="Assets\Scripts\CollectableScript.cs" />
+     <Compile Include="Assets\Scripts\DemonScript.cs" />
+     <Compile Include="Assets\Scripts\EndGameHandling.cs" />
+     <Compile Include="Assets\Scripts\GenerateItem.cs" />
+     <Compile Include="Assets\Scripts\HealthControl.cs" />
+     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\RoomScript.cs" />
+     <Compile Include="Assets\Scripts\SkeletonScript.cs" />
+     <Compile Include="Assets\Scripts\WinRoomScript.cs" />
+     <Compile Include="Assets\Scripts\WorldGenerator.cs" />
      <None Include="Assets\Parse\Parse.Unity.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest 1.xml" />
-     <None Include="Assets\link.xml" />
+     <None Include="Assets\Scripts\link.xml" />
      <None Include="Assets\Parse\README.txt" />
      <None Include="Assets\AssetStoreFiles\README.txt" />
-     <None Include="Assets\Parse.Unity.xml" />
+     <None Include="Assets\Scripts\Parse.Unity.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
-     <None Include="Assets\link 1.xml" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>K:/Downloads/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
+     <None Include="Assets\Scripts\link 1.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>K:/Downloads/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>K:/Downloads/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>K:/Downloads/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="Parse.Unity">
- <HintPath>K:/Documents/MazeGame/DungeonSmasher/Assets/Parse.Unity.dll</HintPath>
- </Reference>
  <Reference Include="Parse.Unity">
  <HintPath>K:/Documents/MazeGame/DungeonSmasher/Assets/Parse/Parse.Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="Parse.Unity">
+ <HintPath>K:/Documents/MazeGame/DungeonSmasher/Assets/Scripts/Parse.Unity.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>K:/Downloads/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
