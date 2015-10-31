@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CharacterScript : MonoBehaviour {
@@ -9,8 +10,9 @@ public class CharacterScript : MonoBehaviour {
 	public int totalScore ;
     public GUIText scoreText;
     private Animator animator;
+    GameObject image;
     private Rigidbody2D cachedRigidBody2D;
- 
+    
     public float facingAngleAdjustment = -90.0f;
   
     /// <summary>
@@ -26,6 +28,7 @@ public class CharacterScript : MonoBehaviour {
         //cached rigidbody
         this.cachedRigidBody2D = this.GetComponent<Rigidbody2D>();
         totalScore = 0;
+        image = GameObject.FindGameObjectWithTag("Health");
     }
  
     public void Move(Vector2 movement)
@@ -48,6 +51,14 @@ public class CharacterScript : MonoBehaviour {
         {
             //rotate by angle around the z axis.
            transform.rotation = Quaternion.AngleAxis(angle, new Vector3(0, 0, 1));
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Demon")
+        {
+            image.GetComponent<HealthControl>().updateLife(--health);
         }
     }
 
