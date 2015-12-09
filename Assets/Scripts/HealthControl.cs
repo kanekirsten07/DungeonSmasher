@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+
 public class HealthControl : MonoBehaviour {
 
     public Sprite health1;
@@ -9,9 +10,11 @@ public class HealthControl : MonoBehaviour {
     public Sprite health3;
     public Sprite health4;
     public Sprite health5;
+
+    public GameObject submitScorePopup;
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
@@ -39,7 +42,18 @@ public class HealthControl : MonoBehaviour {
             case 1:
                 image.sprite = health1;
                 break;
+            case 0:
+                submitScore();
+                break;
         }
     }
+
+   
+    public void submitScore()
+    {
+        Debug.Log("Submit Score");
+        GameObject.Instantiate(submitScorePopup);
+    }
+
 
 }

@@ -8,7 +8,7 @@ public class CharacterScript : MonoBehaviour {
     public float maxSpeed = 1.0f;
     public int health;
 	public int totalScore ;
-    public GUIText scoreText;
+    public Text scoreText;
     private Animator animator;
     GameObject image;
     private Rigidbody2D cachedRigidBody2D;
@@ -24,7 +24,6 @@ public class CharacterScript : MonoBehaviour {
     {
         //cached animator
         this.animator = this.GetComponent<Animator>();
-        scoreText = GameObject.Find("Score").GetComponent<GUIText>();
         //cached rigidbody
         this.cachedRigidBody2D = this.GetComponent<Rigidbody2D>();
         totalScore = 0;

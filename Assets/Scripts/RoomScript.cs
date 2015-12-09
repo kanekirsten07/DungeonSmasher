@@ -48,6 +48,10 @@ public class RoomScript : MonoBehaviour {
         {
             if (go.transform != transform)
             {
+                foreach(Transform child in go.transform)
+                {
+                    GameObject.Destroy(child.gameObject);
+                }
                 Destroy(go);
             }
         }
