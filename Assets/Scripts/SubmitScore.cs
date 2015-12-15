@@ -3,29 +3,36 @@ using UnityEngine.UI;
 
 using System.Collections;
 using Parse;
+
 public class SubmitScore : MonoBehaviour {
 
 	// Use this for initialization
     public InputField username;
-     CharacterScript characterScript;
+    public int scoreString;
+    public CharacterScript characterScript;
     public string usernameString ;
 	
     void Awake()
     {
         Debug.Log("Awake Test");
-        characterScript = (CharacterScript)FindObjectOfType(typeof(CharacterScript));
+    }
+
+    void Start()
+    {
+        characterScript = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterScript>();
+        scoreString = characterScript.totalScore;
     }
 	
-	// Update is called once per frame
-	void Update () {
 	
-	}
-
     public void sendUserNameWithScore()
     {
+
+        usernameString = username.text;
+        characterScript = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterScript>();
         ParseObject submitScore = new ParseObject("SubmitScore");
         Debug.Log("Username: " + username.text.ToString());
-        submitScore["username"] = username.text;
+        Debug.Log("Score: " + characterScript.totalScore);
+        submitScore["username"] =  username.text;
         submitScore["userScore"] = characterScript.totalScore;
         submitScore.SaveAsync();
         //dismissWindow();

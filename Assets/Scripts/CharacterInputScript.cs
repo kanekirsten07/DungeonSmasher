@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class CharacterInputScript : MonoBehaviour {
     //private reference to the character script for making calls to the public api.
