@@ -18,15 +18,6 @@ public class WinRoomScript : MonoBehaviour {
     }
 	
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            Debug.Log("Entered room. Win Condition!");
-            generateWinPopup();
-        }
-    }
-
 
     void generateWinPopup()
     {

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class RoomScript : MonoBehaviour {
@@ -43,16 +44,17 @@ public class RoomScript : MonoBehaviour {
     {
 
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
-
+        
         foreach (GameObject go in rooms)
         {
             if (go.transform != transform)
             {
-                foreach(Transform child in go.transform)
+                foreach (Transform child in go.transform)
                 {
-                    GameObject.Destroy(child.gameObject);
+                    Destroy(child.gameObject);
                 }
-                Destroy(go);
+                //DestroyImmediate(go);
+                Destroy(go.gameObject);
             }
         }
     }
@@ -62,21 +64,21 @@ public class RoomScript : MonoBehaviour {
         transform.GetComponent<Collider2D>().isTrigger = false;
         //  Debug.Log(squareOne.lossyScale.y);
 
-        GameObject newSquare = (GameObject)Object.Instantiate(tileRed);
+        GameObject newSquare = generateRoom();
         tiles.Add(newSquare);
-        GameObject newSquare2 = (GameObject)Object.Instantiate(tileBlack);
+        GameObject newSquare2 = generateRoom();
         tiles.Add(newSquare2);
-        GameObject newSquare3 = (GameObject)Object.Instantiate(tileBlue);
+        GameObject newSquare3 = generateRoom();
         tiles.Add(newSquare3);
-        GameObject newSquare4 = (GameObject)Object.Instantiate(tileGreen);
+        GameObject newSquare4 = generateRoom();
         tiles.Add(newSquare4);
-        GameObject newSquare5 = (GameObject)Object.Instantiate(tileOrange);
+        GameObject newSquare5 = generateRoom();
         tiles.Add(newSquare5);
-        GameObject newSquare6 = (GameObject)Object.Instantiate(tileYellow);
+        GameObject newSquare6 = generateRoom();
         tiles.Add(newSquare6);
-        GameObject newSquare7 = (GameObject)Object.Instantiate(tilePurple);
+        GameObject newSquare7 = generateRoom();
         tiles.Add(newSquare7);
-        GameObject newSquare8 = (GameObject)Object.Instantiate(tileWin);
+        GameObject newSquare8 = generateRoom();
         tiles.Add(newSquare8);
 
         Transform t = transform.FindChild("Brick");
@@ -95,6 +97,40 @@ public class RoomScript : MonoBehaviour {
         newSquare7.transform.position = new Vector3(transform.position[0] + scaleOffsetX, transform.position[1] + scaleOffsetY, transform.position[2]);
         newSquare8.transform.position = new Vector3(transform.position[0] - scaleOffsetX, transform.position[1] - scaleOffsetY, transform.position[2]);
         transform.GetComponent<Collider2D>().isTrigger = true;
+    }
+
+
+    GameObject generateRoom()
+    {
+        int spawnSeed = Random.Range(0, 7);
+        GameObject spawn = new GameObject();
+        switch (spawnSeed)
+        {
+            case 0:
+                spawn = (GameObject)Object.Instantiate(tileBlack);
+                break;
+            case 1:
+                spawn = (GameObject)Object.Instantiate(tileRed);
+                break;
+            case 2:
+                spawn = (GameObject)Object.Instantiate(tileBlue);
+                break;
+            case 3:
+                spawn = (GameObject)Object.Instantiate(tileGreen);
+                break;
+            case 4:
+                spawn = (GameObject)Object.Instantiate(tileOrange);
+                break;
+            case 5:
+                spawn = (GameObject)Object.Instantiate(tilePurple);
+                break;
+            case 6:
+                spawn = (GameObject)Object.Instantiate(tileWin);
+                break;
+        }
+
+        return spawn;
+
     }
 
 }

@@ -35,7 +35,7 @@ public class SubmitScore : MonoBehaviour {
         submitScore["username"] =  username.text;
         submitScore["userScore"] = characterScript.totalScore;
         submitScore.SaveAsync();
-        //dismissWindow();
+        dismissWindow();
     }
 
 
@@ -51,6 +51,7 @@ public class SubmitScore : MonoBehaviour {
         Debug.Log("Dismiss Window");
         GameObject popup = GameObject.FindGameObjectWithTag("Score");
         GameObject.Destroy(popup);
+        Application.LoadLevel("MainMenu");
     }
 
 }

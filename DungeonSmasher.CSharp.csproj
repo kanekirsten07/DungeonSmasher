@@ -83,7 +83,6 @@
     <Compile Include="Assets\Scripts\SkeletonScript.cs" />
     <Compile Include="Assets\Scripts\SubmitScore.cs" />
     <Compile Include="Assets\Scripts\WinRoomScript.cs" />
-    <Compile Include="Assets\Scripts\WorldGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStoreFiles\README.txt" />
