@@ -13,20 +13,13 @@ public class RoomScript : MonoBehaviour {
     public GameObject tilePurple;
     public GameObject tileWin;
 
-    public List<GameObject> tiles;
-    private uint worldWidth = 3;
-    private uint worldHeight = 3;
-    Transform squareOne;
-    GameObject tile;
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+     List<GameObject> tiles;
+
+    void Start()
+    {
+        tiles = new List<GameObject>();
+    }
+  
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -53,7 +46,6 @@ public class RoomScript : MonoBehaviour {
                 {
                     Destroy(child.gameObject);
                 }
-                //DestroyImmediate(go);
                 Destroy(go.gameObject);
             }
         }
@@ -62,7 +54,7 @@ public class RoomScript : MonoBehaviour {
     {
 
         transform.GetComponent<Collider2D>().isTrigger = false;
-        //  Debug.Log(squareOne.lossyScale.y);
+        
 
         GameObject newSquare = generateRoom();
         tiles.Add(newSquare);
@@ -103,7 +95,7 @@ public class RoomScript : MonoBehaviour {
     GameObject generateRoom()
     {
         int spawnSeed = Random.Range(0, 7);
-        GameObject spawn = new GameObject();
+        GameObject spawn = null;
         switch (spawnSeed)
         {
             case 0:
