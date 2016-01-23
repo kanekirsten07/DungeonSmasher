@@ -19,7 +19,7 @@ public class GenerateItem : MonoBehaviour {
 
 	void Start () {
         int spawnSeed = Random.Range(0, 9);
-        GameObject spawn = new GameObject();
+        GameObject spawn = null;
         switch (spawnSeed)
         {
             case 0:
