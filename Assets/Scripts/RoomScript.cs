@@ -13,6 +13,8 @@ public class RoomScript : MonoBehaviour {
     public GameObject tilePurple;
     public GameObject tileWin;
 
+    public GameObject brick;
+
      List<GameObject> tiles;
 
     void Start()
@@ -25,19 +27,33 @@ public class RoomScript : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("Entered room. Generating world.");
-
+            Debug.Log("Entering room.");
+            transform.GetComponent<Collider2D>().isTrigger = false;
+            Debug.Log(transform.GetComponent<Collider2D>().isTrigger);
             cleanUpOldRooms();
             GenerateWorld();
         }
+    }
+    
+    void OnTriggerExit2D(Collider2D col)
+    {
+        Debug.Log("Leaving room");
+        
     }
 
     
     private void cleanUpOldRooms()
     {
-
+        // You don't need to use a find here. Find is an expensive call, and you actually already have all the references you need
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
+
+        //GameObject[] rooms = { tileRed, tileBlack, tileGreen, tileBlue, tileOrange, tileYellow, tilePurple, tileWin };
         
+        // If you don't want to have to create this array manually, there are potential drawbacks; however, another approach would be:
+        // Create a public GameObject[] array. This will allow you in the editor to drop as many room tile prefabs onto it as you want
+        // From there, you can create additional tags for the rooms, and reference the rooms based on their tags. Or use an enum and strictly number the rooms.
+        // The enum approach is probably the most risky though, since it's fragile with ordering.
+
         foreach (GameObject go in rooms)
         {
             if (go.transform != transform)
@@ -49,12 +65,11 @@ public class RoomScript : MonoBehaviour {
                 Destroy(go.gameObject);
             }
         }
+       
+        
     }
     private void GenerateWorld()
     {
-
-        transform.GetComponent<Collider2D>().isTrigger = false;
-        
 
         GameObject newSquare = generateRoom();
         tiles.Add(newSquare);
@@ -88,7 +103,19 @@ public class RoomScript : MonoBehaviour {
         newSquare6.transform.position = new Vector3(transform.position[0] - scaleOffsetX, transform.position[1] + scaleOffsetY, transform.position[2]);
         newSquare7.transform.position = new Vector3(transform.position[0] + scaleOffsetX, transform.position[1] + scaleOffsetY, transform.position[2]);
         newSquare8.transform.position = new Vector3(transform.position[0] - scaleOffsetX, transform.position[1] - scaleOffsetY, transform.position[2]);
+
+        newSquare.GetComponent<Collider2D>().isTrigger = true;
+        newSquare2.GetComponent<Collider2D>().isTrigger = true;
+        newSquare3.GetComponent<Collider2D>().isTrigger = true;
+        newSquare4.GetComponent<Collider2D>().isTrigger = true;
+        newSquare5.GetComponent<Collider2D>().isTrigger = true;
+        newSquare6.GetComponent<Collider2D>().isTrigger = true;
+        newSquare7.GetComponent<Collider2D>().isTrigger = true;
+        newSquare8.GetComponent<Collider2D>().isTrigger = true;
         transform.GetComponent<Collider2D>().isTrigger = true;
+
+    
+
     }
 
 

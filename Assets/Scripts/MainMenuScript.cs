@@ -13,12 +13,9 @@ public class MainMenuScript : MonoBehaviour {
     bool isDoneLoading = false;
     void Awake()
     {
-        Debug.Log("Awake Test");
-
         viewHighScores();
     }
     void Start () {
-        Debug.Log("Start Test");
         TopTen.SetActive(false);
     }
 	

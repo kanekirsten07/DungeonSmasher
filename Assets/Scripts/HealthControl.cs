@@ -51,7 +51,6 @@ public class HealthControl : MonoBehaviour {
    
     public void submitScore()
     {
-        Debug.Log("Submit Score");
         GameObject.Instantiate(submitScorePopup);
     }
 

@@ -24,19 +24,19 @@ public class GenerateItem : MonoBehaviour {
         {
             case 0:
                spawn = Instantiate(Coin, transform.position, transform.rotation) as GameObject;
-              //  Debug.Log("Coin Generated");
+              
                 break;
             case 1:
                 spawn = GameObject.Instantiate(BlueGem, transform.position, transform.rotation) as GameObject;
-               // Debug.Log("Blue Gem generated");
+               
                 break;
             case 2:
                 spawn = GameObject.Instantiate(OrangeGem, transform.position, transform.rotation) as GameObject;
-               // Debug.Log("Orange Gem generated");
+               
                 break;
             case 3:
                 spawn = GameObject.Instantiate(YellowGem, transform.position, transform.rotation) as GameObject;
-               // Debug.Log("Yellow Gem generated");
+               
                 break;
             case 4:
                 spawn = GameObject.Instantiate(AquaGem, transform.position, transform.rotation) as GameObject;

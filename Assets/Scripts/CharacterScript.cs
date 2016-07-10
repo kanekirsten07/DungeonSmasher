@@ -65,7 +65,6 @@ public class CharacterScript : MonoBehaviour {
 	public void addToScore(int scoreValue)
 	{
 		totalScore += scoreValue;
-        Debug.Log("Score is" + totalScore);
         scoreText.text = "Score: " + totalScore;
 	}
 

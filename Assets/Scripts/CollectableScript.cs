@@ -20,7 +20,7 @@ public class CollectableScript : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            Debug.Log("Picked up item");
+            //Debug.Log("Picked up item");
 
             addToScore();
         }
@@ -60,6 +60,10 @@ public class CollectableScript : MonoBehaviour {
             case "Heart":
                 scoreModifier = 5;
                 break;
+            case "RedGem":
+                scoreModifier = 45;
+                break;
+            
 
                 
         }
